@@ -10,11 +10,7 @@ https://ashishtechmill.com/running-simple-spring-boot-application-on-openshift
 https://github.com/yrashish/springboot-openshift
 
 oc delete all -l app=springboot-kubernetes (remove old application)
-
 oc new-app registry.access.redhat.com/openjdk/openjdk-11-rhel7~https://github.com/bmgitit777/springboot-kubernetes.git
-OR
-oc new-app registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/bmgitit777/springboot-kubernetes.git
-
 oc logs -f bc/springboot-kubernetes
 oc status or oc status --suggest
 oc expose svc/springboot-kubernetes
